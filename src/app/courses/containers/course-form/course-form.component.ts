@@ -35,10 +35,10 @@ export class CourseFormComponent {
   }
 
   onSubmit() {
-    this.service.save(this.form.value).subscribe(
-      (response) => this.onSuccess(),
-      (error) => this.onError()
-    );
+    this.service.save(this.form.value).subscribe({
+      next: () => this.onSuccess(),
+      error: () => this.onError(),
+    });
   }
 
   onCancel() {

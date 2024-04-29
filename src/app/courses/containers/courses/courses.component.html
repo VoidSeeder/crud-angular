@@ -10,6 +10,7 @@
         [courses]="courses"
         (add)="onAdd()"
         (edit)="ondEdit($event)"
+        (remove)="onRemove($event)"
       ></app-courses-list>
 
       <ng-template #loading>

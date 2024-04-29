@@ -36,4 +36,8 @@ export class CoursesService {
       .put<Course>(`${this.API}/${course._id}`, course)
       .pipe(first());
   }
+
+  remove(id: string) {
+    return this.httpClient.delete(`${this.API}/${id}`).pipe(first());
+  }
 }
